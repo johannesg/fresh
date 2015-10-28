@@ -20,6 +20,7 @@ var settings = map[string]string{
 	"config_path":       "./runner.conf",
 	"root":              ".",
 	"tmp_path":          "./tmp",
+	"cmd_args":          "",
 	"build_name":        "runner-build",
 	"build_log":         "runner-build-errors.log",
 	"valid_ext":         ".go, .tpl, .tmpl, .html",
@@ -111,6 +112,10 @@ func root() string {
 
 func tmpPath() string {
 	return settings["tmp_path"]
+}
+
+func cmdArgs() string {
+	return settings["cmd_args"]
 }
 
 func buildName() string {
